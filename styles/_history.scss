@@ -1,0 +1,206 @@
+/*.history {
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+    &__items {
+
+      h1 {
+        font-size: 40px;
+
+        @include tablet {
+         text-align: center;
+        }
+      }
+    }
+
+  &__p {
+    width: 980px;
+    padding: 60px 20px 60px 280px;
+    background-color: #f6f9f3;
+    box-sizing: border-box;
+    transform: translateX(35px);
+    position: relative;
+    z-index: 10;
+
+    @include tablet {
+      width: 100%;
+      padding: 60px 20px;
+      transform: translateX(0);
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__form {
+    width: 370px;
+    margin: 55px 0 0 0;
+    transform: translateX(500px);////???
+
+    @include tablet {
+
+
+      width: 280px;
+      transform: translateX(0);
+    }
+
+    h2 {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    &__input {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__btn {
+    width: 370px;
+
+    @include tablet {
+
+      width: 280px;
+    }
+  }
+
+  &__img {
+
+    @include tablet {
+      width: 350px;
+      height: 415px;
+      position: absolute;
+      bottom: -135px;
+      z-index: 10;
+      left: 50%;
+    }
+
+    &__container {
+      @include tablet {
+        position: relative;
+      }
+    }
+  }
+}*/
+
+.history {
+  position: relative;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  &__block {
+
+  }
+
+  &__form {
+    width: 370px;
+    margin: 55px 0 0 0;
+    height: 260px;
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+
+    @include tablet {
+      position: static;
+    }
+
+    &__block {
+      display: inline;
+
+      @include tablet {
+        display: flex;
+      }
+    }
+
+    &__img {
+      display: none;
+      width: 350px;
+      height: 420px;
+
+      @include tablet {
+        display: block;
+      }
+
+
+    }
+
+    &__input {
+      margin: 20px 0;
+      width: 100%;
+    }
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &__items {
+    display: flex;
+
+
+
+    h1 {
+      font-size: 40px;
+      transform: translateX(305px);
+
+      @include tablet {
+        transform: translateX(0);
+      }
+
+    }
+  }
+
+  &__p {
+    width: 980px;
+    padding: 60px 20px 60px 280px;
+    background-color: #f6f9f3;
+    box-sizing: border-box;
+    line-height: 24px;
+    position: relative;
+    z-index: 10;
+    transform: translateX(35px);
+
+    @include tablet {
+      width: 100%;
+      transform: translateX(0);
+      padding-left: 20px;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__img {
+
+    @include tablet {
+      display: none;
+    }
+  }
+}

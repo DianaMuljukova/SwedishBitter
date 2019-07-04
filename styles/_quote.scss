@@ -1,0 +1,30 @@
+
+.quote {
+  margin: 205px auto 240px auto;
+  width: 775px;
+  border-top: 3px solid #a4c58c;
+  border-bottom: 3px solid #a4c58c;
+  text-align: center;
+  padding: 60px 0;
+  line-height: 40px;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+
+  &__text {
+    font-size: 24px;
+    color: #303030;
+    font-weight: bold;
+  }
+
+  .light-gray {
+    color: $extra-font;
+  }
+
+}

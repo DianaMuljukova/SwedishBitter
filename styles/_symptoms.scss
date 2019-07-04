@@ -1,0 +1,172 @@
+.light-green {
+  color: #a4c58c;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+
+td:hover::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-right: 3px solid $green-color;
+  border-bottom: 3px solid $green-color;
+  transform: rotate(-45deg) translateY(-50%);
+  left: 90%;
+  top: 50%;
+}
+
+.symptoms {
+  position: relative;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  &__cover {
+    position: absolute;
+    bottom: -5px;
+    height: 75%;
+    width: 100%;
+    background-color: #f6f9f3;
+
+    @include tablet {
+      height: 100%;
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+  }
+
+  &__td {
+    line-height: 20px;
+    border-bottom: 1px solid #e6efde;
+    padding: 25px 50px 25px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+
+
+  &__box {
+    position: relative;
+
+    .symptoms__review-miniature__wrapper {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 20px 20px 0 20px;
+      width: 375px;
+      background-color: #f6f9f3;
+
+      @include tablet {
+        left: 50%;
+        transform: translateX(-50%);
+
+      }
+
+      @include mobile {
+        position: static;
+        transform: translateX(0);
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .symptoms__review-miniature {
+
+        border: 1px solid $green-color;
+        box-sizing: border-box;
+        padding: 40px 60px;
+        position: relative;
+      }
+    }
+
+    &__picture {
+
+      @include tablet {
+        width: 100%;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__btn {
+    width: 500px;
+    position: absolute;
+    transform: translateY(50px);
+
+    @include tablet {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 375px;
+      bottom: -5%;
+    }
+
+    @include mobile {
+      position: static;
+      transform: translateX(0);
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__items {
+
+    margin: 0 auto;
+
+    h1 {
+      font-size: 40px;
+
+      @include tablet {
+        text-align: center;
+      }
+    }
+  }
+
+}
+
+
+.unbold {
+  font-weight: normal;
+  border-right: 1px solid #e6efde;
+  text-transform: none;
+
+  &:nth-child(2) {
+    padding-left: 40px;
+  }
+}
+
+.review {
+  position: absolute;
+  text-decoration: underline;
+  bottom: -8px;
+  left: 10%;
+  background-color: #f6f9f3;
+  font-size: 14px;
+  color: #7eb152;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+
+
+

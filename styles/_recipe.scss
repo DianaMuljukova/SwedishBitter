@@ -1,0 +1,75 @@
+.recipe {
+  padding: 200px 15px 150px 15px;
+
+  @include tablet {
+    width: 100%;
+    padding-top: 100px;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+
+    background-color: white;
+    padding: 65px;
+    border: 1px solid $green-color;
+
+    @include mobile {
+      border: none;
+    }
+
+
+    &__wrapper {
+      padding: 20px;
+      background-color: white;
+      width: 682px;
+      box-sizing: border-box;
+      margin-left: -315px;
+
+      @include tablet {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    &__paragraph-first {
+      margin-bottom: 20px;
+      line-height: 22px;
+    }
+
+    &__paragraph-second {
+      margin-bottom: 30px;
+      line-height: 22px;
+    }
+
+    &__paragraph-third {
+      margin-bottom: 55px;
+      line-height: 22px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+  &__img {
+    img {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+}

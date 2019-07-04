@@ -1,0 +1,54 @@
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 0;
+
+  @include tablet {
+     width: 100%;
+   }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    &__title {
+      margin-left: 25px;
+      color: $extra-font;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__contacts__phone {
+    display: flex;
+    align-items: center;
+
+    &-number {
+      margin-left: 10px;
+    }
+
+    img {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__contacts__title {
+    font-size: 12px;
+    color: $extra-font;
+    text-align: right;
+    display: block;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

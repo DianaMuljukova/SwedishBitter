@@ -1,0 +1,52 @@
+.foot {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+  align-items: center;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+
+  &__nav {
+
+    &__link {
+      margin-right: 80px;
+      font-size: 12px;
+      color: #9a9a9a;
+      text-decoration: underline;
+
+      @include tablet {
+        text-align: center;
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+
+    }
+  }
+
+  img {
+    @include mobile {
+     display: none;
+    }
+  }
+
+  .head__contacts {
+    @include mobile {
+      display: none;
+    }
+  }
+}

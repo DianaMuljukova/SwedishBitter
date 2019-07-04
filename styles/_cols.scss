@@ -1,0 +1,20 @@
+.row {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: 100% / 12 * #{$i};
+    padding: 0 15px;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
